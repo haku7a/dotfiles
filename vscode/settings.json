@@ -4,5 +4,7 @@
     "editor.fontFamily": "'Cascadia Code', monospace",
     "editor.fontLigatures": true,
     "editor.fontSize": 14,
-    "editor.lineHeight": 1.4
+    "editor.lineHeight": 1.4,
+
+    "window.zoomLevel": 1
 }
