@@ -15,5 +15,20 @@
     "editor.minimap.enabled": false,
     "diffEditor.hideUnchangedRegions.enabled": true,  
 
-    "workbench.startupEditor": "none"
+    "workbench.startupEditor": "none",
+
+    "security.allowedUNCHosts": [
+        "wsl.localhost"
+    ],
+    "terminal.integrated.profiles.windows": {
+        "Ubuntu (WSL)": {
+            "path": "C:\\WINDOWS\\System32\\wsl.exe",
+            "args": [
+                "-d",
+                "Ubuntu"
+            ]
+        }
+    },
+    "terminal.integrated.defaultProfile.windows": "Ubuntu (WSL)"
+
 }
