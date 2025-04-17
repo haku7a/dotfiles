@@ -6,5 +6,12 @@
     "editor.fontSize": 14,
     "editor.lineHeight": 1.4,
 
-    "window.zoomLevel": 1
+    "window.zoomLevel": 1,
+
+    "chat.commandCenter.enabled": false,
+    "workbench.layoutControl.enabled": false,
+    "workbench.navigationControl.enabled": false,
+    "window.commandCenter": false,
+    "editor.minimap.enabled": false,
+    "diffEditor.hideUnchangedRegions.enabled": true   
 }
