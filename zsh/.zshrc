@@ -107,5 +107,9 @@ _process_path() {
     fi
 }
 
+local structure_output=$(_generate_structure "$PWD" "")
+local file_contents_output=$(_process_path "$PWD")
+local output="Project structure:\n${structure_output}\n\nFile contents:\n${file_contents_output}"
+
 LANG=$ORIG_LANG
 }
