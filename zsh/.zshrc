@@ -92,6 +92,19 @@ _process_path() {
     fi
 
     echo -n "${rel_path}${file_status}"
+
+    if [[ -r "$item" && -s "$item" ]]; then
+        local mime_type=$(file -b --mime-type "$item")
+        if [[ "$mime_type" == text/* || "$mime_type" == application/json ]]; then
+            echo
+            cat "$item"
+            echo
+        else
+            echo " (binary)"
+        fi
+    else
+        echo
+    fi
 }
 
 LANG=$ORIG_LANG
