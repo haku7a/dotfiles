@@ -69,6 +69,12 @@ _generate_structure() {
 _process_path() {
     local item="$1"
 
+    for pattern in "${exclude[@]}"; do
+        if [[ "${item:t}" == ${~pattern} ]]; then
+            return
+        fi
+    done
+
     if [[ -d "$item" ]]; then
         for subitem in "$item"/*(ND); do
             _process_path "$subitem"
