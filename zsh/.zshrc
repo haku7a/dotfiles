@@ -82,7 +82,16 @@ _process_path() {
     return
     fi
 
-    echo "file: ${item#$PWD/}"
+    local rel_path="file: ${item#$PWD/}"
+    local file_status=""
+    
+    if [[ ! -r "$item" ]]; then
+        file_status=" (no access)"
+    elif [[ ! -s "$item" ]]; then
+        file_status=" (empty)"
+    fi
+
+    echo -n "${rel_path}${file_status}"
 }
 
 LANG=$ORIG_LANG
