@@ -123,5 +123,7 @@ case "$(uname -s)" in
     *) echo "Unsupported OS" && LANG=$ORIG_LANG && return 1 ;;
 esac
 
+echo "Directory copied"
+
 LANG=$ORIG_LANG
 }
