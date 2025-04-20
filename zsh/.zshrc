@@ -23,5 +23,20 @@ if ! command -v xclip &> /dev/null && [[ "$(uname -r)" != *microsoft* ]]; then
     return 1
 fi
 
+_generate_structure() {
+    local item="$1"
+    local indent="$2"
+    local name="${item:t}"
+
+    if [[ -d "$item" ]]; then
+        echo "${indent}${name}/"
+        for subitem in "$item"/*(ND); do
+        _generate_structure "$subitem" "${indent}  "
+    done
+    else
+        echo "${indent}${name}"
+    fi
+}
+
 LANG=$ORIG_LANG
 }
