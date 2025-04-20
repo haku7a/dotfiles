@@ -111,5 +111,17 @@ local structure_output=$(_generate_structure "$PWD" "")
 local file_contents_output=$(_process_path "$PWD")
 local output="Project structure:\n${structure_output}\n\nFile contents:\n${file_contents_output}"
 
+case "$(uname -s)" in
+    Linux*)
+    if grep -qi microsoft /proc/version; then
+        echo "$output" | iconv -f UTF-8 -t UTF-16LE | clip.exe
+    else
+        echo "$output" | xclip -selection clipboard
+    fi
+      ;;
+    Darwin*) echo "$output" | pbcopy ;;
+    *) echo "Unsupported OS" && LANG=$ORIG_LANG && return 1 ;;
+esac
+
 LANG=$ORIG_LANG
 }
