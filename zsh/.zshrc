@@ -17,5 +17,11 @@ local exclude=(
     "__pycache__"
   )
 
+if ! command -v xclip &> /dev/null && [[ "$(uname -r)" != *microsoft* ]]; then
+    echo "ERROR: Clipboard access requires xclip. Install: sudo apt install xclip"
+    LANG=$ORIG_LANG
+    return 1
+fi
+
 LANG=$ORIG_LANG
 }
