@@ -28,6 +28,23 @@ _generate_structure() {
     local indent="$2"
     local name="${item:t}"
 
+    local excluded=0
+    for pattern in "${exclude[@]}"; do
+        if [[ "$name" == ${~pattern} ]]; then
+            excluded=1
+            break
+        fi
+    done
+
+    if (( excluded )); then
+        if [[ -d "$item" ]]; then
+            echo "${indent}${name}/ (exclude)"
+        else
+            echo "${indent}${name} (exclude)"
+        fi
+        return
+    fi
+
     if [[ -d "$item" ]]; then
         echo "${indent}${name}/"
         for subitem in "$item"/*(ND); do
