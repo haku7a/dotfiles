@@ -56,6 +56,11 @@ _generate_structure() {
             file_status=" (no access)"
         elif [[ ! -s "$item" ]]; then
             file_status=" (empty)"
+        else
+            local mime_type=$(file -b --mime-type "$item" 2>/dev/null)
+            if [[ "$mime_type" != text/* && "$mime_type" != application/json ]]; then
+                file_status=" (binary)"
+            fi
         fi
         echo "${indent}${name}${file_status}"
     fi
