@@ -51,7 +51,13 @@ _generate_structure() {
         _generate_structure "$subitem" "${indent}  "
     done
     else
-        echo "${indent}${name}"
+        local file_status=""
+        if [[ ! -r "$item" ]]; then
+            file_status=" (no access)"
+        elif [[ ! -s "$item" ]]; then
+            file_status=" (empty)"
+        fi
+        echo "${indent}${name}${file_status}"
     fi
 }
 
