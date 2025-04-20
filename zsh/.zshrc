@@ -48,8 +48,8 @@ _generate_structure() {
     if [[ -d "$item" ]]; then
         echo "${indent}${name}/"
         for subitem in "$item"/*(ND); do
-        _generate_structure "$subitem" "${indent}  "
-    done
+            _generate_structure "$subitem" "${indent}  "
+        done
     else
         local file_status=""
         if [[ ! -r "$item" ]]; then
@@ -64,6 +64,19 @@ _generate_structure() {
         fi
         echo "${indent}${name}${file_status}"
     fi
+}
+
+_process_path() {
+    local item="$1"
+
+    if [[ -d "$item" ]]; then
+        for subitem in "$item"/*(ND); do
+            _process_path "$subitem"
+        done
+    return
+    fi
+
+    echo "file: ${item#$PWD/}"
 }
 
 LANG=$ORIG_LANG
