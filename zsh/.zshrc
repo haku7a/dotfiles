@@ -97,7 +97,7 @@ export_dir_tree() {
             local mime_type=$(file -b --mime-type "$item")
             if [[ "$mime_type" == text/* || "$mime_type" == application/json ]]; then
                 echo
-                cat "$item"
+                sed 's/\\/\\\\/g' -- "$item"
                 echo
             else
                 echo " (binary)"
