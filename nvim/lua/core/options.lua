@@ -6,3 +6,6 @@ vim.o.relativenumber = true
 
 -- Enable mouse support
 vim.o.mouse = "a"
+
+-- Show current mode
+vim.o.showmode = true
