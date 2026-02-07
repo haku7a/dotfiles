@@ -41,3 +41,6 @@ vim.o.splitbelow = true
 -- Show invisible characters
 vim.o.list = true
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
+
+-- Preview substitutions live, as you type.
+vim.o.inccommand = "split"
