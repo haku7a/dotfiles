@@ -14,3 +14,6 @@ vim.o.showmode = true
 vim.schedule(function()
 	vim.o.clipboard = "unnamedplus"
 end)
+
+-- Enable break indent
+vim.o.breakindent = true
