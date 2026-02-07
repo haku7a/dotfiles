@@ -8,3 +8,9 @@ map("n", "<leader>q", vim.diagnostic.setloclist, { silent = true, desc = "Open d
 
 -- Exit terminal mode
 map("t", "<Esc><Esc>", "<C-\\><C-n>", { silent = true, desc = "Exit terminal mode" })
+
+-- Better window navigation
+map("n", "<C-h>", "<C-w>h", { silent = true, desc = "Move focus to the left window" })
+map("n", "<C-l>", "<C-w>l", { silent = true, desc = "Move focus to the right window" })
+map("n", "<C-j>", "<C-w>j", { silent = true, desc = "Move focus to the lower window" })
+map("n", "<C-k>", "<C-w>k", { silent = true, desc = "Move focus to the upper window" })
