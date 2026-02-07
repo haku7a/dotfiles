@@ -50,3 +50,6 @@ vim.o.cursorline = false
 
 -- Minimal number of screen lines to keep above and below the cursor
 vim.o.scrolloff = 10
+
+-- Ask to save changes before exiting modified buffer
+vim.o.confirm = true
