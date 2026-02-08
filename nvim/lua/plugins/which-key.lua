@@ -8,7 +8,7 @@ return {
 		win = {
 			width = 45,
 			height = { min = 5, max = 25 },
-			col = -2,
+			col = 1000,
 			row = 0.9,
 			-- border = "rounded",
 			wo = {
