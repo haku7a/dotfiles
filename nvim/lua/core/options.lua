@@ -8,7 +8,7 @@ vim.o.relativenumber = true
 vim.o.mouse = "a"
 
 -- Show current mode
-vim.o.showmode = true
+vim.o.showmode = false
 
 -- Sync clipboard between OS and Neovim
 vim.schedule(function()
