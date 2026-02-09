@@ -58,15 +58,18 @@ return {
 
 		local capabilities = require("blink.cmp").get_lsp_capabilities()
 
-		local servers = {}
+		local servers = {
+			ruff = {},
+			rust_analyzer = {},
+		}
 
-		local ensure_installed = vim.tbl_keys(servers or {})
-		vim.list_extend(ensure_installed, {
+		local ensure_installed = {
 			"lua-language-server",
 			"stylua",
 			"ruff",
 			"rust-analyzer",
-		})
+			"black",
+		}
 
 		require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
