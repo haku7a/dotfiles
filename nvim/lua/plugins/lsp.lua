@@ -61,6 +61,7 @@ return {
 		local servers = {
 			ruff = {},
 			rust_analyzer = {},
+			basedpyright = {},
 		}
 
 		local ensure_installed = {
@@ -69,6 +70,7 @@ return {
 			"ruff",
 			"rust-analyzer",
 			"black",
+			"basedpyright",
 		}
 
 		require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
