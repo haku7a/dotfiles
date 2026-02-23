@@ -8,3 +8,5 @@ map("n", "<Leader>x", ":bdelete<CR>", { silent = true, desc = "Close current buf
 -- Telescope
 map("n", "<leader>ff", function() require("telescope.builtin").find_files() end, { desc = "Find files" })
 
+-- Neo-tree
+map("n", "<leader>e", ":Neotree toggle<CR>", { silent = true, desc = "Toggle Neo-tree" })
