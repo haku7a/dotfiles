@@ -11,5 +11,10 @@ return {
     window = {
       position = "float",
     },
+    filesystem = {
+      filtered_items = {
+        hide_gitignored = false,
+      },
+    },
   },
 }
