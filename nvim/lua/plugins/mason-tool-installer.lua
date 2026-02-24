@@ -5,6 +5,8 @@ return {
     ensure_installed = {
       "ruff",
       "stylua",
+      "lua_ls",
+      "basedpyright",
     },
   },
 }
