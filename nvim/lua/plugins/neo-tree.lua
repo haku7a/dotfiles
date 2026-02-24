@@ -9,8 +9,7 @@ return {
   lazy = false, -- neo-tree will lazily load itself
   opts = {
     window = {
-      position = "float"
-    }
-  }
+      position = "float",
+    },
+  },
 }
-
