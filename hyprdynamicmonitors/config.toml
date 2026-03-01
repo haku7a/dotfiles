@@ -1,0 +1,34 @@
+[general]
+destination = "$HOME/.config/hypr/monitors.conf"
+
+[power_events]
+
+[power_events.dbus_query_object]
+path = "/org/freedesktop/UPower/devices/line_power_ADP0"
+
+[[power_events.dbus_signal_match_rules]]
+object_path = "/org/freedesktop/UPower/devices/line_power_ADP0"
+
+
+[profiles.laptop]
+config_file = "/home/vld/.config/hyprdynamicmonitors/hyprconfigs/laptop.go.tmpl"
+config_file_type = "template"
+[profiles.laptop.conditions]
+
+[[profiles.laptop.conditions.required_monitors]]
+description = "BOE NE153QDM-NZ8 0x0000006F"
+monitor_tag = "monitor0"
+
+
+[profiles.docked]
+config_file = "/home/vld/.config/hyprdynamicmonitors/hyprconfigs/docked.go.tmpl"
+config_file_type = "template"
+[profiles.docked.conditions]
+
+[[profiles.docked.conditions.required_monitors]]
+description = "BOE NE153QDM-NZ8 0x0000006F"
+monitor_tag = "monitor0"
+
+[[profiles.docked.conditions.required_monitors]]
+description = "Xiaomi Corporation Mi Monitor 6644210050114"
+monitor_tag = "monitor1"
