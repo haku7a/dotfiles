@@ -1,8 +1,15 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 35,
+    "height": 40,
     "margin-top": 10,
     "margin-left": 20,
-    "margin-right": 20
+    "margin-right": 20,
+
+    "modules-right": ["clock"],
+
+    "clock": {
+        "format": "{:%H:%M}"
+    }
 }
+

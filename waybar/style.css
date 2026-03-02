@@ -1,3 +1,13 @@
 window#waybar {
-    background-color: #1d2021;
+    background-color: transparent;
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#clock {
+    background-color: #232323;
+    color: #9ece6a;
+    padding: 8px 16px;
+    border-radius: 10px;
 }
