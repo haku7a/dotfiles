@@ -7,7 +7,7 @@
     "margin-right": 20,
 
     "modules-left": ["hyprland/workspaces"],
-    "modules-right": ["custom/gpu-temp", "hyprland/language", "battery", "clock"],
+    "modules-right": ["custom/cpu-temp", "custom/gpu-temp", "hyprland/language", "battery", "clock"],
 
 
     "hyprland/workspaces": {
@@ -36,6 +36,13 @@
     "format": "{}°C", 
     "exec": "nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits",
     "interval": 5,
-    }
+    },
+
+    "custom/cpu-temp": {
+    "format": "{}°C ",
+    "exec": "sensors -u | grep -A 1 'Package id 0' | grep 'temp1_input' | cut -d: -f2 | cut -d. -f1 | tr -d ' '",
+    "interval": 5,
+    "tooltip": true
+   },
 }
 
