@@ -7,7 +7,7 @@
     "margin-right": 20,
 
     "modules-left": ["hyprland/workspaces"],
-    "modules-right": ["hyprland/language", "battery", "clock"],
+    "modules-right": ["custom/gpu-temp", "hyprland/language", "battery", "clock"],
 
 
     "hyprland/workspaces": {
@@ -30,6 +30,12 @@
     },
 
     "hyprland/language": {
-}
+    },
+
+    "custom/gpu-temp": {
+    "format": "{}°C", 
+    "exec": "nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits",
+    "interval": 5,
+    }
 }
 

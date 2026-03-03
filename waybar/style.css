@@ -50,3 +50,11 @@ window#waybar {
     margin-right: 10px;
 }
 
+#custom-gpu-temp {
+    background-color: #232323;
+    color: #9ece6a;
+    padding: 8px 12px;
+    border-radius: 10px;
+    margin-right: 10px;
+    font-weight: bold;
+}
