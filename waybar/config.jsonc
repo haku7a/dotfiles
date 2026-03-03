@@ -6,10 +6,19 @@
     "margin-left": 20,
     "margin-right": 20,
 
-    "modules-right": ["clock"],
+    "modules-right": ["battery", "clock"],
 
     "clock": {
         "format": "{:%H:%M}"
+    },
+
+    "battery": {
+    "bat": "BAT0",
+    "interval": 30,
+    "format": "{capacity}% {icon}",
+    "format-charging": "{capacity}% 󰂄",
+    "format-plugged": "{capacity}% 󱘖",
+    "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
     }
 }
 

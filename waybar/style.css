@@ -11,3 +11,13 @@ window#waybar {
     padding: 8px 16px;
     border-radius: 10px;
 }
+
+#battery {
+    color: #9ece6a;
+    background-color: #232323;
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-right: 10px;
+
+}
