@@ -7,7 +7,7 @@
     "margin-right": 20,
 
     "modules-left": ["hyprland/workspaces"],
-    "modules-right": ["battery", "clock"],
+    "modules-right": ["hyprland/language", "battery", "clock"],
 
 
     "hyprland/workspaces": {
@@ -27,6 +27,9 @@
     "format-charging": "{capacity}% 󰂄",
     "format-plugged": "{capacity}% 󱘖",
     "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
-    }
+    },
+
+    "hyprland/language": {
+}
 }
 

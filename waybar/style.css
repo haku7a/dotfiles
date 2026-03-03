@@ -40,3 +40,13 @@ window#waybar {
     background-color: #9ece6a;
     color: #232323;
 }
+
+#language {
+    background-color: #232323;
+    color: #9ece6a;
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
